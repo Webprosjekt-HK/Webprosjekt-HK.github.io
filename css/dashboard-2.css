@@ -1,0 +1,273 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    background:#f7c354;
+    transition: all 0.4s ease;
+}
+
+.sidebar.column {
+    padding: 0;
+}
+
+.columns {
+    margin: 0;
+}
+
+.sidebar.active {
+    width: 60px;
+}
+
+.sidebar .logo-content {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+}
+
+.sidebar .logo-content .logo img {
+    width: 80px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo-content .logo img {
+    width: 20px;
+}
+
+.sidebar.sidebar.active .logo-content {
+    margin-left: -100px;
+}
+
+.sidebar .nav-list {
+    margin-top: 40px;
+}
+
+.sidebar .nav-list li {
+    height: 70px;
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar .nav-list li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    white-space: nowrap;
+}
+
+.sidebar .nav-list li a:hover {
+    background: #ffd67e;
+    transform: scale(1.05);
+}
+
+.sidebar .nav-list li a i {
+    min-width: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: #25232e;
+}
+
+.sidebar .nav-list li a .links-name {
+    font-size: 16px;
+    font-weight: normal;
+    color: #25232e;
+    white-space: nowrap;
+}
+
+/* TOP BAR CSS */
+
+.dashboard-section {
+    background: #f4f4f4;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 230px);
+    left: 230px;
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.sidebar.active ~ .dashboard-section {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.dashboard-section nav {
+    position: fixed;
+    width: calc(100% - 230px);
+    left: 230px;
+    height: 80px;
+    top: 0;
+    background: #fff;
+    padding: 50px 20px;
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 1px 10px rgba(0,0,0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active ~ .dashboard-section nav {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.dashboard-section nav .burger-btn {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    white-space: nowrap;
+    margin-left: -45px;
+}
+
+.dashboard-section nav .burger-btn i {
+    font-size: 30px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    margin-right: 30px;
+    color: #000;
+    border-radius: 50%;
+    align-items: center;;
+}
+
+.dashboard {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-section nav .avdeling-box {
+    position: relative;
+    height: 50px;
+    width: 350px;
+    margin: 0 20px;
+}
+
+nav .avdeling-box select {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    padding: 0 15px;
+    font-size: 16px;
+    background: #f4f4f4;
+    border: 1px solid #25232e;
+    outline: none;
+}
+
+.dashboard-section nav .profile-details {
+    align-items: center;
+    display: flex;
+    min-width: 190px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 12px;
+    height: 50px;
+    background: #f4f4f4;
+}
+
+nav .profile-details img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+nav .profile-details .profile-name {
+    font-size: 16px;
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+.dashboard-section .dashboard-content {
+    padding-top: 100px;
+    justify-content: center;
+}
+.italic {
+    font-style: italic;
+    font-size: 10pt;
+}
+
+@media (max-width: 1216px) {
+    .sidebar {
+        width: 60px;
+    }
+    .sidebar.active {
+        width: 230px;
+    }
+    .dashboard-section {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .sidebar.active ~ .dashboard-section {
+        width: calc(100% - 230px);
+        left: 230px;
+    }
+    .dashboard-section nav {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .sidebar.active ~ .dashboard-section nav {
+        width: calc(100% - 230px);
+        left: 230px;
+    }
+}
+
+@media (max-width: 658px) {
+    .sidebar {
+        width: 0;
+    }
+    .sidebar.active {
+        width: 60px;
+    }
+    .dashboard-section {
+        width: 100%;
+        left: 0;
+    }
+    .sidebar.active ~ .dashboard-section {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .dashboard-section nav {
+        width: 100%;
+        left: 0;
+    }
+    .sidebar.active ~ .dashboard-section nav {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .dashboard-section nav .profile-details {
+        min-width: 50px;
+        height: 50px;
+    }
+    nav .profile-details .profile-name,
+    .dashboard {
+        display: none;
+    }
+    .dashboard-section nav .burger-btn {
+        margin-left: 20px;
+    }
+}

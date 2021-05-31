@@ -1,0 +1,248 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16pt;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    background: #faece4;
+    transition: all 0.4s ease;
+}
+
+.sidebar.column {
+    padding: 0;
+}
+
+.columns {
+    margin: 0;
+}
+
+.sidebar.active {
+    width: 60px;
+}
+
+.sidebar .logo-content {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.sidebar .nav-list {
+    margin-top: 40px;
+}
+
+.sidebar .nav-list li {
+    height: 70px;
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar .nav-list li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    white-space: nowrap;
+}
+
+.sidebar .nav-list li a:hover {
+    background: #e3d5cd;
+    transform: scale(1.05);
+}
+
+.sidebar .nav-list li a i {
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.sidebar .nav-list li a .links-name {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    white-space: nowrap;
+}
+
+/* TOP BAR CSS */
+
+.dashboard-section {
+    background: #ffffff;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 230px);
+    left: 230px;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active ~ .dashboard-section {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.dashboard-section nav {
+    position: fixed;
+    width: calc(100% - 230px);
+    left: 230px;
+    height: 80px;
+    top: 0;
+    background: #fff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 3px -2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.active ~ .dashboard-section nav {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.dashboard-section nav .burger-btn {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.dashboard-section nav .burger-btn i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.dashboard-section nav .avdeling-box {
+    position: relative;
+    height: 50px;
+    width: 550px;
+    margin: 0 20px;
+}
+
+nav .avdeling-box select {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 18px;
+    background: #f5f6fa;
+    border: 2px solid #efeef1;
+    outline: none;
+}
+
+nav .avdeling-box .bxs-map {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    background: #e3d5cd;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.dashboard-section nav .profile-details {
+    align-items: center;
+    display: flex;
+    min-width: 190px;
+    padding: 0 15px 0 2px;
+    height: 50px;
+}
+
+nav .profile-details img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #e3d5cd;
+}
+
+nav .profile-details .profile-name {
+    font-size: 15px;
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+.dashboard-section .dashboard-content {
+    padding-top: 100px;
+    justify-content: center;
+}
+
+@media (max-width: 1216px) {
+    .sidebar {
+        width: 60px;
+    }
+    .sidebar.active {
+        width: 230px;
+    }
+    .dashboard-section {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .sidebar.active ~ .dashboard-section {
+        width: calc(100% - 230px);
+        left: 230px;
+    }
+    .dashboard-section nav {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .sidebar.active ~ .dashboard-section nav {
+        width: calc(100% - 230px);
+        left: 230px;
+    }
+}
+
+@media (max-width: 658px) {
+    .sidebar {
+        width: 0;
+    }
+    .sidebar.active {
+        width: 60px;
+    }
+    .dashboard-section {
+        width: 100%;
+        left: 0;
+    }
+    .sidebar.active ~ .dashboard-section {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .dashboard-section nav {
+        width: 100%;
+        left: 0;
+    }
+    .sidebar.active ~ .dashboard-section nav {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .dashboard-section nav .profile-details {
+        min-width: 50px;
+        height: 50px;
+    }
+    nav .profile-details .profile-name,
+    .dashboard {
+        display: none;
+    }
+}

@@ -1,0 +1,222 @@
+/* Christian testing */
+
+/*  Kan noen se på denne */
+#popup-close {
+    position: relative;
+    left: 94%;
+    top: -30px;
+}
+#popup-panel {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    z-index: 400;
+    background-color: white;
+}
+.tui-full-calendar-weekday-schedule-bullet {
+    display: none;
+}
+#outer-shift-container .cards-container {
+    padding-left: 0 !important;
+    padding-right: 0;
+}
+.dashboard-section nav {
+    z-index: 1000;
+}
+
+/* Svartfargen er muligens feil på denne */
+.card {
+    background: #fff;
+    color: #25232e !important;
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(94, 104, 121, 0.288);
+}
+.panel-heading {
+    background: #fff;
+}
+.card-icon {
+    font-size: 35px;
+    background: #f7c354;
+    box-shadow: 3px 3px 10px rgba(94, 104, 121, 0.288);
+    padding: 10px;
+    color: #25232e;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.button {
+    background: #f7c354 !important;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px #cbced1, -3px -3px 5px #fff;
+    font-size: 16px;
+    font-weight: bold;
+    color: #25232e !important;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background: #ffd67e !important;
+    color: #25232e !important;
+}
+
+#profile-info .card {
+    background: #fff;
+    padding: 20px 5px 10px 5px;
+    margin-top: 24px;
+    max-width: 260px;
+}
+.card-header {
+    box-shadow: none;
+    font-size: 16px;
+    margin-left: 5px;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+#calendar {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    top: 0px;
+}
+
+#outer-calendar {
+    margin: 40px 15px 0 15px;
+    padding-top: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 20px rgba(94, 104, 121, 0.288);
+}
+
+#calendar-menu,
+#shift-menu {
+    padding-bottom: 10px;
+}
+#profile-info .card {
+    box-shadow: none;
+}
+
+#profile-info .card-content {
+    margin-top: 10px;
+    border-radius: 6px;
+}
+#profile-info .card-content .media {
+    border-radius: 6px 6px 0 0;
+}
+.italic {
+    font-style: italic;
+    font-size: 70%;
+}
+
+/* SALES */
+
+#sales-container {
+    width: calc(100% - 90px);
+}
+
+/* --------------------------------- */
+
+#table {
+    position: left;
+}
+
+.dropbtn {
+    background-color: #ffff;
+    color: #49380b;
+    padding: 9px 30px;
+    font-size: 16px;
+    line-height: 18px;
+    border: 2px solid #49380b;
+    border-radius: 4px;
+    margin: 0px 0px 8px 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ffff;
+}
+
+/* Meny */
+
+.remove-btn {
+    font-size: 24px;
+    color: rgb(177, 2, 2);
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    transform: scale(1.2);
+    color: rgb(225, 0, 0);
+}
+
+/* Avedlinger */
+
+.employees-box {
+    padding: 20px 0 0 50px;
+    justify-content: space-between;
+    background: #f4f4f4;
+    border-radius: 12px;
+}
+
+/* Vareoversikt */
+
+.storage-normal {
+    background: #29cc97bb;
+    padding: 12px 12px 12px 12px;
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.storage-low {
+    background: #fec400bb;
+    padding: 12px 12px 12px 12px;
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.storage-empty {
+    background: #fe4e4ebb;
+    padding: 12px 12px 12px 12px;
+    border-radius: 25px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}

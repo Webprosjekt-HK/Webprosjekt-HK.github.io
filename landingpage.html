@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gylden Pizza</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/landingpage-2.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <script src="/js/pages/landingpage.js" type="module" defer></script>
+        <link rel="icon" href="/images/logo_enkel_bg.svg">
+    </head>
+    <body>
+
+        <img src="/images/logo.svg" alt="logo" height="132px" width="160px" class="my-6 mx-6" id="logo">
+
+        <section class="section" id="hero">
+            <!--<div class="container">-->
+                <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+                    <div class="navbar-brand">
+                        <a class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                            <span aria-hidden="true" style="color: #F9932F;"></span>
+                            <span aria-hidden="true" style="color: #F9932F;"></span>
+                            <span aria-hidden="true" style="color: #F9932F;"></span>
+                        </a>
+                    </div>
+                  
+
+                    <div class="navbar-menu" id="nav-links">
+
+                        <div class="navbar-start">
+                            <a class="navbar-item" href="#">
+                            Meny
+                            </a>
+                    
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link" href="#">
+                                    Restauranter
+                                </a>
+                    
+                                <div class="navbar-dropdown has-text-centered">
+                                    <a class="navbar-item">
+                                        Oslo - Majorstuen
+                                    </a>
+                                    <a class="navbar-item">
+                                        Oslo - Storo
+                                    </a>
+                                    <a class="navbar-item">
+                                        Oslo - Skippergata
+                                    </a>
+                                    <a class="navbar-item">
+                                        Oslo - Ensjø
+                                    </a>
+                                </div>
+                            </div>
+                                <a class="navbar-item" href="#">
+                                    Kontakt oss
+                                </a>
+                        </div>
+                     
+                  
+                      <div class="navbar-end">
+                        
+                        <div>
+                            <a class="navbar-item" id="openLogin">
+                                <i class="bx bxs-user"></i>
+                                Ansatte
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </nav>
+
+                    <div class="columns pt-6">
+                        <div class="column mt-6">
+                            <h1 class="is-size-1 has-text-white">
+                                Bestill din gyldne <br>pizza i dag!
+                            </h1>
+                            <div class="mt-4">
+                                <button class="fancy-btn">Bestill nå</button>
+                            </div>
+                        </div>
+                    </div>
+
+            <!--</div>-->
+        </section>
+        <section class="section" id="meny">
+
+        </section>
+        <section class="section" id="restauranter">
+
+        </section>
+
+        <!-- Modal box  -->
+        <div id="loginBox" class="box">
+            <div class="box-content">
+                <form action="" class="form">
+                    <span class="close">&times;</span>
+                    <img src="images/logo_enkel_bg.svg" alt="gp-logo">
+                    <h2>Logg inn</h2>
+                    <div class="input-group">
+                        <input type="text" name="loginUser" id="loginUser" required>
+                        <label for="loginUser">Brukernavn</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="loginPassword" id="loginPassword" required>
+                        <label for="loginPassword">Passord</label>
+                    </div>
+                    <button class="button" id="login-btn">Logg inn</button>
+                    <a href="#" class="forgot-pw">Glemt passord?</a>
+                </form>
+        </div>
+
+
+    <script>
+
+        // BURGER MENU SCRIPT
+
+        const burgerIcon = document.querySelector('#burger');
+        const navbarMenu = document.querySelector('#nav-links');
+
+        burgerIcon.addEventListener('click', () => {
+            navbarMenu.classList.toggle('is-active')
+        });
+
+
+
+
+        //document.addEventListener('DOMContentLoaded', function () {
+
+        // Get all "navbar-burger" elements
+        //var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        //if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        //$navbarBurgers.forEach(function ($el) {
+            //$el.addEventListener('click', function () {
+
+            // Get the target from the "data-target" attribute
+           // var target = $el.dataset.target;
+            //var $target = document.getElementById(target);
+
+            // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+            //$el.classList.toggle('is-active', 'has-black-text');
+            //$target.classList.toggle('is-active', 'has-black-text');
+
+            //});
+        //});
+        //}
+
+        //});
+
+        // OPEN LOGIN BOX SCRIPT
+
+        // Get the modal
+        var modal = document.getElementById("loginBox");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("openLogin");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+
+        // BUTTON SCRIPT
+
+        const button = document.querySelectorAll('.fancy-btn');
+
+        button.forEach(button => {
+            button.addEventListener('click', function (e) {
+                const x = e.clientX;
+                const y = e.clientY;
+
+                const buttonTop = e.target.offsetTop;
+                const buttonLeft = e.target.offsetLeft;
+
+                const xInButton = x - buttonLeft;
+                const yInButton = y - buttonTop;
+
+                const circle = document.createElement('span');
+                circle.classList.add('circle');
+                circle.style.top = yInButton + 'px';
+                circle.style.left = xInButton + 'px';
+
+                this.appendChild(circle);
+
+                setTimeout(() => circle.remove(), 500);
+            })
+        })
+
+    </script>
+    </body>
+</html>

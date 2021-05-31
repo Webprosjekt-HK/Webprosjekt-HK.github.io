@@ -1,0 +1,152 @@
+/* 
+FARGER:
+Mørk: #e3d5cd
+Lys: #faece4
+*/
+
+#logo{
+    position: absolute;
+}
+
+#hero {
+    background: url(/images/landing_page_cropped.jpg);
+    height: 1024px;
+    background-position-x: center ;
+    background-size: cover;
+}
+
+#hero .navbar.is-transparent {
+    background-color: transparent;
+}
+
+.navbar-start {
+    margin-left: 20%;
+}
+
+.navbar-item{
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
+    text-decoration: none;
+}
+
+a.underline{
+    position: relative;
+}
+
+.underline :before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .underline :hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+.navbar-link {
+    color: white;
+}
+
+.navbar-dropdown {
+    color: black;
+}
+
+.columns.pt-6{
+    margin-top: 12%;
+}
+
+h1 {
+    font-size: 64pt;
+}
+
+.fancy-btn {
+    position: relative;
+    background-color: #F9932F;
+    color: #000;
+    border: 0px #e3d5cd solid;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, .2);
+    transition: all 0.2s ease;
+}
+
+.fancy-btn .circle {
+    position: absolute;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(255, 168, 38, 0.8), 
+        rgba(73, 56, 11, 0.8));
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-75%, -75%) scale(0);
+    animation: scale 0.4s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+/* The Modal (background) */
+.box {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .box-content {
+    background-color: #fefefe;
+    text-align: center;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  #login {
+      height: 35px;
+      width: 240px;
+  }
+  #password {
+      height: 35px;
+      width: 240px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
